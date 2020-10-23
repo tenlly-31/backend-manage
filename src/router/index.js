@@ -21,7 +21,14 @@ const routes = [{
 ]
 
 const router = new VueRouter({
-    routes
+        routes
+    })
+    // 挂载路由导航守卫
+router.beforeEach((to, from, next) => {
+    if (to.path === '/login') return next()
+    const tokenStr = window.sessionStorage.getItem('token')
+    console.log(tokenStr)
+    if (!tokenStr) return next('/login')
+    next()
 })
-
 export default router
