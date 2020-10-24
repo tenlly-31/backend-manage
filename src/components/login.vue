@@ -2,7 +2,7 @@
   <div class="login-container">
     <div class="login-box">
       <div class="ava-box">
-        <img src="../assets/hei.png" alt />
+        <img src="../assets/img/hei.png" alt />
       </div>
       <!-- 登录表单 -->
       <!-- ref获取表单的实例对象 -->
@@ -10,11 +10,11 @@
         <el-form-item prop="username">
           <!-- 前置图标prefix-icon 后置图标suffix-icon -->
           <!-- 用户名 -->
-          <el-input v-model="loginForm.username" prefix-icon="iconfont icon-jinrongxianxingge-">用户名</el-input>
+          <el-input v-model="loginForm.username" prefix-icon="iconfont icon-user">用户名</el-input>
         </el-form-item>
         <!-- 密码 -->
         <el-form-item prop="password">
-          <el-input v-model="loginForm.password" prefix-icon="iconfont icon-suo" type="password">密码</el-input>
+          <el-input v-model="loginForm.password" prefix-icon="iconfont icon-mima" type="password">密码</el-input>
         </el-form-item>
         <el-form-item class="btn-form">
           <el-button type="primary" @click="login">登录</el-button>
