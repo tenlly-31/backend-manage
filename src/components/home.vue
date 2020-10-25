@@ -109,6 +109,10 @@ export default {
     }
   }
 }
+.el-container{
+  height:100%;
+  overflow: hidden;
+}
 .el-aside {
   background-color: #333744;
   transition: width .5s;
