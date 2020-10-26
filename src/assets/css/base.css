@@ -8,7 +8,6 @@ body,
 }
 body {
   min-width: 500px;
-  overflow-y: hidden;
 }
 .el-breadcrumb {
   margin-bottom: 15px;
@@ -16,10 +15,18 @@ body {
 }
 .el-card {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15) !important;
-  height: 100%;
-  overflow-y: scroll;
 }
 .el-table {
   margin-top: 15px;
   font-size: 12px;
+}
+.el-cascader-panel {
+  height: 500px;
+}
+.el-cascader-panel .el-radio__input {
+  visibility: hidden;
+}
+td,
+th {
+  text-align: center;
 }

@@ -11,6 +11,8 @@ const rights = () =>
     import ('../components/power/rights')
 const roles = () =>
     import ('../components/power/roles')
+const cate = () =>
+    import ('../components/goods/cate')
 Vue.use(VueRouter)
 
 const routes = [{
@@ -44,6 +46,10 @@ const routes = [{
             {
                 path: '/roles',
                 component: roles
+            },
+            {
+                path: '/categories',
+                component: cate
             }
         ]
     }

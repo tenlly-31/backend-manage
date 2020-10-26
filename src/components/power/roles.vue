@@ -49,7 +49,7 @@
                     <el-tag
                       closable
                       type="warning"
-                      v-for="(item3, i3) in item2.children"
+                      v-for="(item3) in item2.children"
                       :key="item3.id"
                       @close="removeRightById(scope.row,item3.id)"
                     >{{item3.authName}}</el-tag>
@@ -280,11 +280,14 @@ export default {
     },
     // 确定修改
     async setRole() {
-      const {data: res} = await this.$http.put(`roles/${this.changeRoleForm.id}`,this.changeRoleForm)
-      if (res.meta.status !== 200) return this.$Message.error(res.meta.msg);
-      this.$Message.success("修改成功！")
-      this.getRoleList()
-      this.changeDialogVisible = false;
+      this.$refs.changeRoleRef.validate(async (valid) => {
+        if (!valid) return;
+        const {data: res} = await this.$http.put(`roles/${this.changeRoleForm.id}`,this.changeRoleForm)
+        if (res.meta.status !== 200) return this.$Message.error(res.meta.msg);
+        this.$Message.success("修改成功！")
+        this.getRoleList()
+        this.changeDialogVisible = false;
+      })
     },
     // 删除角色
     async deleteRole(id) {
