@@ -156,9 +156,9 @@ export default {
             trigger: "blur",
           },
           {
-            min: 3,
-            max: 10,
-            message: "分类名长度在3-8个字符之间",
+            min: 2,
+            max: 8,
+            message: "分类名长度在2-8个字符之间",
             trigger: "blur",
           },
         ],
@@ -248,21 +248,19 @@ mounted () {
         this.addForm.cat_pid = this.selectedKeys[this.selectedKeys.length - 1]
         // 为当前分类等级赋值
         this.addForm.cat_level = this.selectedKeys.length
-        // this.$refs.addCateFormRef.dropDownVisible = false;
         return
       }else{
         // 设置父级分类的ID
         this.addForm.cat_pid = 0
         // 为当前分类等级赋值
         this.addForm.cat_level = 0
-        // this.$refs.addCateFormRef.dropDownVisible = false;
       }
     },
     addCateDialogClosed() {
-      this.$refs.addCateFormRef.resetFields()
+      this.$refs.addFormRef.resetFields()
       this.selectedKeys = []
-      this.addCateForm.cat_level = 0
-      this.addCateForm.cat_pid = 0
+      this.addForm.cat_level = 0
+      this.addForm.cat_pid = 0
     },
     addCate() {
        this.$refs.addFormRef.validate(async (valid) => {

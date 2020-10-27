@@ -21,7 +21,7 @@ body {
   font-size: 12px;
 }
 .el-cascader-panel {
-  height: 500px;
+  height: 300px;
 }
 .el-cascader-panel .el-radio__input {
   visibility: hidden;

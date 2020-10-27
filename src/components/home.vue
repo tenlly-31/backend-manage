@@ -114,6 +114,7 @@ export default {
   overflow: hidden;
 }
 .el-aside {
+  overflow:hidden;
   background-color: #333744;
   transition: width .5s;
   .toggle-button{
