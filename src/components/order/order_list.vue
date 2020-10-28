@@ -30,7 +30,7 @@
         </el-table-column>
         <!-- 操作按钮 -->
         <el-table-column label="操作" width="180px">
-          <template slot-scope="scope">
+          <template>
             <el-button type="primary" icon="el-icon-edit" size="mini" @click="ShowEditLo"></el-button>
             <el-button type="success" icon="el-icon-location" size="mini" @click="showProgressBox"></el-button>
           </template>
